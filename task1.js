@@ -10,9 +10,9 @@ obj = {
 };
 
 function greeting(who) {
-  return console.log(this.say);
+  alert(this[who].say);
 }
 
-greeting.call(obj.anonim);
-greeting.call(obj.user);
-greeting.call(obj.admin);
+greeting.call(obj, "anonim");
+greeting.call(obj, "user");
+greeting.call(obj, "admin");
